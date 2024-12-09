@@ -4,7 +4,11 @@ import { IonicModule } from '@ionic/angular';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DriverPageModule } from './driver/driver.module';
-import { HttpClientModule } from '@angular/common/http';
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
+import { AngularFireAnalyticsModule } from '@angular/fire/compat/analytics';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [AppComponent],
@@ -13,7 +17,10 @@ import { HttpClientModule } from '@angular/common/http';
     IonicModule.forRoot(),
     AppRoutingModule,
     DriverPageModule,
-    HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase), 
+    AngularFirestoreModule, 
+    AngularFireAuthModule, 
+    AngularFireAnalyticsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

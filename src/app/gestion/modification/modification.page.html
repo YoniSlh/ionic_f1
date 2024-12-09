@@ -1,0 +1,93 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Modification du driver</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form (ngSubmit)="updateDriver()">
+    <ion-item>
+      <ion-label position="stacked">Prénom</ion-label>
+      <ion-input
+        [(ngModel)]="driver.first_name"
+        name="first_name"
+        required
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Nom</ion-label>
+      <ion-input
+        [(ngModel)]="driver.last_name"
+        name="last_name"
+        required
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Nom de l'équipe</ion-label>
+      <ion-input
+        [(ngModel)]="driver.team_name"
+        name="team_name"
+        required
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Numéro du pilote</ion-label>
+      <ion-input
+        type="number"
+        [(ngModel)]="driver.driver_number"
+        name="driver_number"
+        required
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">URL de l'image</ion-label>
+      <ion-input
+        [(ngModel)]="driver.headshot_url"
+        name="headshot_url"
+        required
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Couleur de l'équipe</ion-label>
+      <ion-input
+        [(ngModel)]="driver.team_colour"
+        name="team_colour"
+        required
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Acronyme de l'équipe</ion-label>
+      <ion-input
+        [(ngModel)]="driver.name_acronym"
+        name="name_acronym"
+        required
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Code pays</ion-label>
+      <ion-input
+        [(ngModel)]="driver.country_code"
+        name="country_code"
+        required
+      ></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="stacked">Nom du diffuseur</ion-label>
+      <ion-input
+        [(ngModel)]="driver.broadcast_name"
+        name="broadcast_name"
+        required
+      ></ion-input>
+    </ion-item>
+
+    <ion-button expand="block" type="submit">Mettre à jour</ion-button>
+  </form>
+</ion-content>

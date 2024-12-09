@@ -1,18 +1,26 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>Drivers</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="navigateToGestion()"
+        >Accéder à la gestion</ion-button
+      >
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
   <ion-list>
     <ion-item *ngFor="let driver of drivers" class="driver-item">
-      <div class="team-color-bar"></div>
+      <div
+        class="team-color-bar"
+        [style.background-color]="'#' + driver.team_colour"
+      ></div>
       <ion-avatar slot="start">
-        <img [src]="driver.headshot_url" alt="{{ driver.full_name }}" />
+        <img [src]="driver.headshot_url" alt="{{ driver.first_name }} {{ driver.last_name }}" />
       </ion-avatar>
       <ion-label>
-        <h2>{{ driver.full_name }}</h2>
+        <h2>{{ driver.first_name }} {{ driver.last_name }}</h2>
         <p>Équipe : {{ driver.team_name }}</p>
         <p>Numéro : {{ driver.driver_number }}</p>
       </ion-label>

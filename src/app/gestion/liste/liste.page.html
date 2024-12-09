@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Liste des drivers</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="router.navigate(['/gestion/creation'])"
+        >Créer un driver</ion-button
+      >
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let driver of drivers">
+      <ion-label>
+        <h2>{{ driver.first_name }} {{ driver.last_name }}</h2>
+        <p>Équipe : {{ driver.team_name }}</p>
+      </ion-label>
+      <ion-button (click)="goToModification(driver)">Modifier</ion-button>
+      <ion-button color="danger" (click)="deleteDriver(driver.id)"
+        >Supprimer</ion-button
+      >
+    </ion-item>
+  </ion-list>
+</ion-content>
