@@ -1,26 +1,82 @@
 ion-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 16px;  
-  }
-  
-  .team-color-bar {
-    width: 10px; 
-    height: 60px; 
-    border-radius: 8px;  
-    margin-right: 16px; 
-  }
-  
-  ion-avatar {
-    margin-right: 12px;  
-  }
-  
-  ion-label h2 {
-    font-size: 18px;  
-    font-weight: bold;  
-  }
-  
-  ion-label p {
-    color: #555; 
-  }
-  
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.driver-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+}
+
+.driver-avatar img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin-right: 16px;
+}
+
+ion-card {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  border-left: 10px solid transparent;
+}
+
+ion-card-header {
+  padding: 10px;
+}
+
+ion-card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+ion-card-content {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+ion-grid {
+  padding: 16px;
+}
+
+ion-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+ion-col {
+  flex: 1 1 calc(33.333% - 16px); 
+  max-width: calc(33.333% - 16px);
+}
+
+.driver-card {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  border-left: 10px solid #ccc; // si aucune couleur dans BdD
+}
+
+.ionLabelCard {
+  margin-left: 16px;
+}
+
+ion-label h2 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+ion-label p {
+  color: #555;
+  margin: 2px 0;
+}

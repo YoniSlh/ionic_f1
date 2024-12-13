@@ -1,29 +1,52 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>Drivers</ion-title>
-    <ion-buttons slot="end">
-      <ion-button (click)="navigateToGestion()"
-        >Accéder à la gestion</ion-button
-      >
-    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-item *ngFor="let driver of drivers" class="driver-item">
-      <div
-        class="team-color-bar"
-        [style.background-color]="'#' + driver.team_colour"
-      ></div>
-      <ion-avatar slot="start">
-        <img [src]="driver.headshot_url" alt="{{ driver.first_name }} {{ driver.last_name }}" />
-      </ion-avatar>
-      <ion-label>
-        <h2>{{ driver.first_name }} {{ driver.last_name }}</h2>
-        <p>Équipe : {{ driver.team_name }}</p>
-        <p>Numéro : {{ driver.driver_number }}</p>
-      </ion-label>
-    </ion-item>
-  </ion-list>
+  <ion-grid>
+    <ion-row>
+      <ion-col *ngFor="let driver of drivers">
+        <ion-card
+          [ngStyle]="{'border-left': '10px solid #' + driver.team_colour}"
+        >
+          <ion-card-header>
+            <div class="driver-card-header">
+              <ion-avatar slot="start">
+                <img
+                  [src]="driver.headshot_url"
+                  alt="{{ driver.first_name }} {{ driver.last_name }}"
+                />
+              </ion-avatar>
+              <ion-label class="ionLabelCard">
+                <h2>{{ driver.first_name }} {{ driver.last_name }}</h2>
+                <p>Équipe : {{ driver.team_name }}</p>
+                <p>Numéro : {{ driver.driver_number }}</p>
+              </ion-label>
+            </div>
+          </ion-card-header>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
+
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+    <ion-tab-button routerLink="/home" routerLinkActive="active">
+      <ion-icon name="home-outline"></ion-icon>
+      <ion-label>Accueil</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button routerLink="/drivers" routerLinkActive="active">
+      <ion-icon name="car-outline"></ion-icon>
+      <ion-label>Drivers</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button routerLink="/gestion/liste" routerLinkActive="active">
+      <ion-icon name="settings-outline"></ion-icon>
+      <ion-label>Gestion</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

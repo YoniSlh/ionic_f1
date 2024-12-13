@@ -35,7 +35,7 @@ const routes: Routes = [
       import('./gestion/modification/modification.module').then(
         (m) => m.ModificationPageModule
       ),
-  },
+  }
 ];
 
 @NgModule({
