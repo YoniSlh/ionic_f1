@@ -7,10 +7,6 @@ const routes: Routes = [
     loadChildren: () =>
       import('./tab/tab.module').then((m) => m.TabPageModule),
   },
-  {
-    path: 'picture',
-    loadChildren: () => import('./picture/picture.module').then( m => m.PicturePageModule)
-  }
 ];
 
 @NgModule({

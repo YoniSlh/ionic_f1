@@ -45,15 +45,15 @@ const routes: Routes = [
           ),
       },
       {
-        path: 'picture',
+        path: 'camera',
         loadChildren: () =>
-          import('../picture/picture.module').then((m) => m.PicturePageModule),
+          import('../camera/camera.module').then((m) => m.CameraPageModule),
       },
       {
         path: 'about',
         loadChildren: () =>
           import('../about/about.module').then((m) => m.AboutPageModule),
-      }
+      },
     ],
   },
 ];

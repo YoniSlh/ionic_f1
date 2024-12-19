@@ -1,3 +1,8 @@
+ion-header {
+  --background: #353535;
+  --color: #ecf0f1;
+}
+
 ion-toolbar {
   padding-left: 15px;
   padding-right: 15px;
@@ -6,14 +11,45 @@ ion-toolbar {
 ion-title {
   font-size: 20px;
   font-weight: bold;
+  color: #ecf0f1;
+}
+
+ion-content {
+  --background: #2c2c2c;
+  padding: 20px;
 }
 
 .about-container {
   padding: 20px;
 }
 
-.text-center {
-  text-align: center;
+
+.about-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.about-avatar {
+  width: 120px;
+  height: 120px;
+  margin-right: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #ecf0f1;
+}
+
+.about-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 h1 {
@@ -37,7 +73,7 @@ p {
 }
 
 .project-info {
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 .project-info p {
@@ -46,12 +82,13 @@ p {
 }
 
 .tech-info {
-  font-size: 16px;
+  font-size: 14px;
   color: #bdc3c7;
 }
 
 .tech-label {
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
 ul {
@@ -66,7 +103,7 @@ ul li {
 }
 
 a {
-  color: #3498db;
+  color: #7f8c8d;
   text-decoration: none;
 }
 

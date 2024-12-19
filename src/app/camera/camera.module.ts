@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { PicturePageRoutingModule } from './picture-routing.module';
+import { CameraPageRoutingModule } from './camera-routing.module';
 
-import { PicturePage } from './picture.page';
+import { CameraPage } from './camera.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    PicturePageRoutingModule
+    CameraPageRoutingModule
   ],
-  declarations: [PicturePage]
+  declarations: [CameraPage]
 })
-export class PicturePageModule {}
+export class CameraPageModule {}
