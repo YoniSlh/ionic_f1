@@ -1,0 +1,75 @@
+ion-toolbar {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+ion-title {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.about-container {
+  padding: 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+h1 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #ecf0f1;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  color: #bdc3c7;
+}
+
+.about-card {
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: #353535;
+  color: #ecf0f1;
+}
+
+.project-info {
+  margin-bottom: 10px;
+}
+
+.project-info p {
+  font-size: 16px;
+  color: #ecf0f1;
+}
+
+.tech-info {
+  font-size: 16px;
+  color: #bdc3c7;
+}
+
+.tech-label {
+  font-weight: bold;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li {
+  font-size: 14px;
+  color: #bdc3c7;
+  margin-bottom: 5px;
+}
+
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
