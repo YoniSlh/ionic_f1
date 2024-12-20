@@ -23,12 +23,12 @@ ion-content {
   padding: 20px;
 }
 
-
 .about-header {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 }
 
 .about-avatar {
@@ -50,6 +50,7 @@ ion-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  text-align: center;
 }
 
 h1 {
@@ -109,4 +110,63 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .about-header {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+
+  .about-avatar {
+    margin-right: 0;
+    margin-bottom: 10px;
+    width: 100px;
+    height: 100px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .about-card {
+    padding: 15px;
+  }
+
+  ul li {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 12px;
+  }
+
+  .about-avatar {
+    width: 80px;
+    height: 80px;
+  }
+
+  .about-card {
+    padding: 10px;
+  }
+
+  ul li {
+    font-size: 12px;
+  }
 }

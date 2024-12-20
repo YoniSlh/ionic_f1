@@ -8,7 +8,6 @@ ion-item {
   display: flex;
   align-items: center;
   justify-content: flex-start;
-
 }
 
 .driver-avatar img {
@@ -55,7 +54,7 @@ ion-row {
 }
 
 ion-col {
-  flex: 1 1 calc(33.333% - 16px); 
+  flex: 1 1 calc(33.333% - 16px);
   max-width: calc(33.333% - 16px);
 }
 
@@ -79,4 +78,43 @@ ion-label h2 {
 ion-label p {
   color: #555;
   margin: 2px 0;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  ion-col {
+    flex: 1 1 calc(50% - 16px);
+    max-width: calc(50% - 16px);
+  }
+
+  ion-label h2 {
+    font-size: 0.9rem;
+  }
+
+  ion-label p {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  ion-col {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  ion-label h2 {
+    font-size: 1rem;
+  }
+
+  ion-label p {
+    font-size: 0.9rem;
+  }
+
+  .ionLabelCard {
+    margin-left: 10px;
+  }
+
+  ion-card {
+    padding: 8px;
+  }
 }
