@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { GestionRoutingModule } from './gestion-routing.module';
+import { GestionPageRoutingModule } from './gestion-routing.module';
 
 
 @NgModule({
   declarations: [],
   imports: [
     CommonModule,
-    GestionRoutingModule
+    GestionPageRoutingModule
   ]
 })
 export class GestionModule { }

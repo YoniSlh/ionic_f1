@@ -29,11 +29,11 @@ export class ModificationPage implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.driverId = this.route.snapshot.paramMap.get('id');
+    this.driverId = this.route.snapshot.paramMap.get('id'); // récupère l'id du pilote depuis l'URL
     if (this.driverId) {
       this.driverService.getDriverById(this.driverId).subscribe({
         next: (data) => {
-          this.driver = { ...data };
+          this.driver = { ...data }; // assigne les données récupérées au pilote
         },
         error: (error) => {
           alert('Erreur lors du chargement des données');

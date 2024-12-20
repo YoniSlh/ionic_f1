@@ -15,7 +15,7 @@ export class ListePage implements OnInit {
   ngOnInit() {
     this.driverService.getDrivers().subscribe((data) => {
       this.drivers = data.map((driver: any) => {
-        return { ...driver, id: driver.id };
+        return { ...driver, id: driver.id }; // ajoute l'id au pilote
       });
     });
   }
@@ -25,7 +25,7 @@ export class ListePage implements OnInit {
       next: () => {
         alert('Suppression réussie');
         this.driverService.getDrivers().subscribe((data) => {
-          this.drivers = data.map((d: any) => ({ ...d, id: d.id }));
+          this.drivers = data.map((d: any) => ({ ...d, id: d.id })); // met à jour la liste après suppression
         });
       },
       error: (error) => {
@@ -36,6 +36,6 @@ export class ListePage implements OnInit {
   }
 
   goToModification(driver: any) {
-    this.router.navigate(['/gestion/modification', driver.id]);
+    this.router.navigate(['/gestion/modification', driver.id]); // redirige vers la page de modification
   }
 }

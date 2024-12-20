@@ -7,30 +7,31 @@ import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
   styleUrls: ['./camera.page.scss'],
 })
 export class CameraPage implements OnInit {
-  public photos: picture[] = [];
-  constructor() { }
+  public photos: picture[] = []; // tableau pour stocker les photos prises
+  constructor() {}
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   async addNewPhoto() {
     const capture = await Camera.getPhoto({
-      resultType: CameraResultType.Uri,
-      source: CameraSource.Camera,
-      quality: 100
+      resultType: CameraResultType.Uri, // format de l'image retournée
+      source: CameraSource.Camera, // source de la photo (appareil photo)
+      quality: 100, // qualité maximale de la photo
     });
 
+    // ajoute la photo capturée au début du tableau
     this.photos.unshift({
       filepath: '',
-      webviewPath: capture.webPath
-    }); 
+      webviewPath: capture.webPath,
+    });
   }
 
-  takePhoto(){
+  takePhoto() {
     this.addNewPhoto();
   }
 }
 
+// interface pour définir la structure d'une photo
 export interface picture {
   filepath: string;
   webviewPath: string | undefined;
